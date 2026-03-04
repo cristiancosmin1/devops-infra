@@ -36,4 +36,4 @@ spec:
             - name: DB_NAME
               value: {{ .Values.postgres.db | quote }}
           resources:
-            {{- toYaml .Values.resources | nindent 12 }}
+{{- toYaml .Values.resources | nindent 12 }}
