@@ -5,6 +5,10 @@ metadata:
   name: lotto-app
 spec:
   ingressClassName: {{ .Values.ingress.className }}
+  tls:
+    - hosts:
+        - {{ .Values.ingress.host }}
+      secretName: lotto-app-tls
   rules:
     - host: {{ .Values.ingress.host }}
       http:
